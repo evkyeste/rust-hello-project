@@ -5,8 +5,7 @@ fn main() {
     colors.insert("Red", 10);
     colors.insert("Blue", 20);
 
-    for (color, index) in colors {
-        println!("Color: {} - {}", color, index);
+    for (color, value) in colors {
+        println!("Color: {} - {}", color, value);
     }
-    
 }
