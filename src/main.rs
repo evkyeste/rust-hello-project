@@ -1,16 +1,14 @@
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
 fn main() {
-    let mut scores = HashMap::new();
-    scores.insert("Score", 100);
+    let mut numbers = BTreeMap::new();
+    numbers.insert(1, "One");
+    numbers.insert(2, "Two");
+    numbers.insert(3, "Three");
 
-    // if let Some(score) = scores.get_mut("Score") {
-    //     *score += 50;
-    //     println!("Score: {}", score);
-    // } else {
-    //     println!("Score not found");
-    // }
+    for (key, value) in &numbers {
+        println!("{}: {}", key, value)
+    }
 
-    scores.entry("Score").and_modify(|e| *e += 50);
-    println!("Score: {:?}", scores);
+    println!("{:?}", numbers)
 }
