@@ -1,11 +1,12 @@
 use std::collections::HashMap;
 
 fn main() {
-    let mut fruits = HashMap::new();
-    fruits.insert("Apple", 5);
-    fruits.insert("Banana", 3);
+    let mut colors = HashMap::new();
+    colors.insert("Red", 10);
+    colors.insert("Blue", 20);
 
-    if let Some(&count) = fruits.get("Apple") {
-        println!("Apple count: {}", count); // Output: Apple count: 5
+    for (color, index) in colors {
+        println!("Color: {} - {}", color, index);
     }
+    
 }
