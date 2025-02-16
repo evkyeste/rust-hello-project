@@ -1,14 +1,6 @@
-use std::collections::BTreeMap;
-
+fn print_type_of<T>(_: &T) {
+    println!("Type: {}", std::any::type_name::<T>());
+}
 fn main() {
-    let mut numbers = BTreeMap::new();
-    numbers.insert(1, "One");
-    numbers.insert(2, "Two");
-    numbers.insert(3, "Three");
-
-    for (key, value) in &numbers {
-        println!("{}: {}", key, value)
-    }
-
-    println!("{:?}", numbers)
+    let num = 10;
 }
